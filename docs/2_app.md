@@ -21,7 +21,7 @@ Position yourself in the RateX/contracts files and run:
 ```
 npx hardhat node                                                - starting a local hardhat fork
 npx hardhat run scripts/deploy.js --network localhost           - deploys smart contracts
-npx hardhat run scrips/fundHardhat.js --network localhost       - funds the first hardhat account
+npx hardhat run scripts/utils/fundHardhat.js --network localhost       - funds the first hardhat account
 ```
 Then, from the RateX folder run `npm start`.
 
@@ -31,7 +31,7 @@ Position yourself in the RateX/contracts folder and run:
 ```
 npx hardhat node
 npx hardhat run scripts/deploy.js --network tenderly            - deploys smart contracts
-npx hardhat run scrips/fundTenderly.js --network tenderly       - funds the first wallet account
+npx hardhat run scripts/utils/fundHardhat.js --network tenderly       - funds the first wallet account
 ```
 Then, from the RateX folder run `npm start`.
 
