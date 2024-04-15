@@ -11,7 +11,7 @@ async function initializeDexes(): Promise<void> {
     const files = [
       'SushiSwapV2.ts',
       'UniswapV3.ts',
-      'BalancerV2.ts',
+      //'BalancerV2.ts',
       'Curve.ts',
       // 'CamelotV2.ts' 
     ]

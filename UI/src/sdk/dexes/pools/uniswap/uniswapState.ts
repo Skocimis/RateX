@@ -1,6 +1,6 @@
-import {PoolData, PoolState} from './types'
+import { PoolData, PoolState } from './types'
 import { UniswapHelperContract } from '../../../../contracts/rateX/UniswapHelper'
-import {convertInitialPoolDataToPoolState, convertRowPoolData} from './utils'
+import { convertInitialPoolDataToPoolState, convertRowPoolData } from './utils'
 import { UniswapOffchainQuoter } from './uniswapOffchainQuoter'
 
 export class UniswapState {
@@ -8,7 +8,7 @@ export class UniswapState {
   public static quoter: UniswapOffchainQuoter = new UniswapOffchainQuoter()
   private static batch_size = 3;
 
-  private constructor() {}
+  private constructor() { }
 
   public static getPoolState(poolAddress: string): PoolState | undefined {
     return this.poolStateMap.get(poolAddress.toLowerCase());

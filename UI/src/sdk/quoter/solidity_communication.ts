@@ -31,11 +31,11 @@ async function executeSwap(
   const web3: Web3 = initRPCProvider(42161)
   const tokenInContract = new web3.eth.Contract(ERC20_ABI, tokenIn)
   //@ts-ignore
-  const balance: bigint = await tokenInContract.methods.balanceOf(signer).call()
+  /*const balance: bigint = await tokenInContract.methods.balanceOf(signer).call()
 
   if (balance < amountIn) {
     return { isSuccess: false, errorMessage: 'Insufficient balance' } as ResponseType
-  }
+  }*/
 
   try {
     // @ts-ignore

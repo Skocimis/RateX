@@ -1,6 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-require('dotenv').config({path:__dirname+'/.env'})
-
+require('dotenv').config({ path: __dirname + '/.env' })
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
@@ -29,21 +28,21 @@ module.exports = {
       ]
     },
     hardhat: {
-      chainId: 31337,
+      chainId: 42161,
       forking: {
         url: process.env.ARBITRUM_URL_ALCHEMY,
+      },
+      chains: {
+        42161: {
+          hardforkHistory: {
+            london: 23850000,
+          }
+        }
       }
     },
     localhost: {
-      chainId: 31337,
+      chainId: 42161,
       url: "http://127.0.0.1:8545/"
-    },
-    tenderly: {
-        chainId: 42161,
-        url: process.env.TENDERLY_URL,
-        accounts: [
-            process.env.ACC1_SK || "",
-        ]
     }
   }
 };
